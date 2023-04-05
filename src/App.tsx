@@ -21,7 +21,7 @@ import {
 import tw from 'twrnc';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Main from './container/Main';
+import Main from './container/Main/Main';
 import SignUp from './container/SignUp';
 import Login from './container/Login';
 
