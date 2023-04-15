@@ -32,9 +32,9 @@ function Login({navigation}: {navigation:any}): JSX.Element {
         <Text style={tw`text-[#fff] font-bold`}>Home</Text>
       </TouchableOpacity>
       <View style={tw`flex-1 items-center`}>
-        <Image 
+        {/*<Image 
           style={tw` h-[150px] w-[150px]`}
-          source={require('../../public/images/background.png')}  />
+  source={require('../../public/images/background.png')}  />*/}
         </View>
         <View style={tw`h-[700px] bg-[#fff] rounded-t-[30px]`}>
             <Text style={tw`text-[#2A52BE] text-[30px] font-black ml-[30px] mt-[30px]`}>

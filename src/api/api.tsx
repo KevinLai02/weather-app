@@ -1,8 +1,9 @@
 import axios from 'axios'
+
 export async function getIpData(){
     return await axios({
         method: 'GET',
-        url: 'https://ipapi.co/1.173.41.202/json',
+        url: 'https://ipapi.co/json',
     })
 }
 export async function getWeatherData(lat:string, lon:string){
