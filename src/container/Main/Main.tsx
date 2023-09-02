@@ -7,28 +7,32 @@
 
 import React from 'react';
 import {observer} from 'mobx-react-lite';
-import {SafeAreaView, Text, View, TouchableOpacity} from 'react-native';
+import {SafeAreaView, Text, View, TouchableOpacity, Image} from 'react-native';
 import tw from 'twrnc';
 import rootStore from '../../store';
-import NetInfo from '@react-native-community/netinfo';
 
 function Main({navigation}: {navigation: any}): JSX.Element {
   const {
-    mainStore: {country, temperature, weather, weatherDetail, searchWeatherApi},
+    mainStore: {
+      country,
+      temperature,
+      weather,
+      weatherDetail,
+      searchWeatherApi,
+      unsubscribe,
+      getIPaddress,
+    },
   } = rootStore;
-  const unsubscribe = NetInfo.addEventListener(state => {
-    console.log('Connection type', state.type);
-    console.log('Is connected?', state.isConnected);
-  });
 
   // Unsubscribe
   unsubscribe();
+  getIPaddress();
 
   return (
     <SafeAreaView style={tw`bg-[#87CEEB] h-full  flex-1`}>
       {/*<Image
           style={tw`h-full w-full absolute`}
-  source={require('../../../public/images/background1.png')}  />*/}
+  source={require('../../img/background.png')}  />*/}
       <View style={tw`flex-1 justify-center items-center ml-[10px] mt-[20px]`}>
         <Text
           style={tw`text-[60px] text-[#fff] text-center mt-[30px] font-light`}>
